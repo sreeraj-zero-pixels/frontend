@@ -24,7 +24,7 @@ function App() {
   const [tasks, setTasks] = useState(initialTasks);
 
   const addTaskHandler = (taskName) => {
-    fetch("http://localhost:8000/task", {
+    fetch("https://training-6jya.onrender.com/task", {
       method: "POST",
       body: JSON.stringify({
         taskId: Math.random(),
@@ -34,7 +34,7 @@ function App() {
         "Content-type": "application/json; charset=UTF-8"
       }
     }).then((res) => {
-      fetch("http://localhost:8000/task")
+      fetch("https://training-6jya.onrender.com/task")
         .then((res) => res.json())
         .then((res) => setTasks(res));
     });
@@ -45,7 +45,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:8000/task")
+    fetch("https://training-6jya.onrender.com/task")
       .then((res) => res.json())
       .then((res) => setTasks(res));
   }, []);
