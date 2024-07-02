@@ -1,38 +1,95 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(90deg,
+      #00204a 0%,
+      #005792 100%);
+  color: white;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  border-radius: 16px;
+  background: #fafafa;
+  /* border: 5px solid #680747; */
+  margin: 50px auto;
+  width: 400px;
+  padding: 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: linear-gradient(90deg,
+      rgba(255, 118, 20, 1) 0%,
+      rgba(255, 84, 17, 1) 100%); */
+
+  background: linear-gradient(90deg,
+      #00204a 100%,
+      #005792 0%);
+  padding: 8px 16px;
+  border-radius: 6px;
+  width: 350px;
+  margin-bottom: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .card:nth-child(4n + 1) {
+  background: linear-gradient(90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%);
+}
+
+.card:nth-child(4n + 2) {
+  background: linear-gradient(90deg,
+      rgba(255, 12, 241, 1) 0%,
+      rgba(250, 0, 135, 1) 100%);
+} */
+
+/* .card:nth-child(4n + 3) {
+  background: linear-gradient(90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%);
+} */
+
+button {
+  /* border: none; */
+  border-radius: 4px;
+  height: fit-content;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.tasks {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-input {
+  /* border: none; */
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.navbar a {
+  color: black;
+  background-color: white;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 6px;
 }
